@@ -1,5 +1,5 @@
 name: UI Compile
-on: [push, workflow_dispatch]
+on: [workflow_dispatch]
 jobs:
   test:
     name: Lint & Unit Test
