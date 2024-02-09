@@ -29,8 +29,8 @@ jobs:
         with:
           path: ${{ steps.npm-cache-dir.outputs.dir }}
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          # restore-keys: |
+          #   ${{ runner.os }}-node-
 
       - name: Install Dependencies
         run: npm ci
@@ -62,8 +62,8 @@ jobs:
         with:
           path: ${{ needs.test.outputs.npm-cache-dir }}
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          # restore-keys: |
+          #   ${{ runner.os }}-node-
 
       - name: Install Dependencies
         run: npm ci
