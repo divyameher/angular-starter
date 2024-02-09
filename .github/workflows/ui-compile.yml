@@ -19,8 +19,8 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       
-      - name: Linting
+      - name: Execute Linting
         run: npm run lint
 
-      - name: Unit Tests
+      - name: Execute Unit Tests & Coverage
         run: npm run test
