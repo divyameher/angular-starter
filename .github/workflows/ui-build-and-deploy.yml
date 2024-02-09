@@ -24,7 +24,7 @@ jobs:
         run: echo "${{steps.npm-cache-dir.outputs.dir}}"
 
       - name: Cache dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
         with:
           path: ${{ steps.npm-cache-dir.outputs.dir }}
@@ -57,7 +57,7 @@ jobs:
           node-version: '18.x'
 
       - name: Cache dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
         with:
           path: ${{ needs.test.outputs.npm-cache-dir }}
