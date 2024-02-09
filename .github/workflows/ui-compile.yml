@@ -2,7 +2,7 @@ name: UI Compile
 on: [workflow_dispatch, push]
 jobs:
   test:
-    name: Lint & Unit Test
+    name: Lint & Unit Tests
     runs-on: ubuntu-latest
     
     steps:
