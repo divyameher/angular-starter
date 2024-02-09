@@ -1,0 +1,23 @@
+name: UI Compile
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    name: Compilation
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+
+      - name: Install Dependencies
+        run: npm ci
+      
+      - name: Unit Tests
+        run: npm run test
