@@ -1,5 +1,5 @@
 name: Build & Deploy
-on: [workflow_dispatch, push]
+on: [workflow_dispatch]
 jobs:
   test:
     name: Lint & Unit Tests
